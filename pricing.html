@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleanup Sprint — Flat Pricing</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header { margin-bottom: 3rem; }
+        .page-header h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted-text); margin-bottom: 0.5rem; }
+        .page-header h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 1rem; }
+        .page-header p { color: var(--muted-text); font-size: 1.1rem; }
+        .pricing-hero-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 2.5rem; text-align: center; margin-bottom: 2rem; }
+        .pricing-hero-card .price-tag { font-size: 3.5rem; font-weight: 700; letter-spacing: -0.03em; margin: 1rem 0 0.5rem 0; }
+        .pricing-hero-card .price-sub { color: var(--muted-text); font-size: 0.95rem; margin-bottom: 2rem; }
+        .pricing-hero-card .price-features { border-top: 1px solid #eee; padding-top: 1.5rem; font-size: 0.95rem; text-align: left; max-width: 500px; margin: 0 auto; color: var(--muted-text); }
+        .pricing-hero-card .price-features strong { color: var(--text-main); }
+        .split-payment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+        .payment-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.5rem; }
+        .payment-card .pay-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; color: var(--muted-text); margin-bottom: 0.5rem; }
+        .payment-card .pay-amount { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .payment-card .pay-desc { font-size: 0.9rem; color: var(--muted-text); }
+        .info-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 2rem; margin-bottom: 3rem; }
+        .info-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .info-card p { color: var(--muted-text); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .info-card p:last-child { margin-bottom: 0; }
+        .btn-action { background-color: var(--accent-pink); color: var(--text-main); padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; text-decoration: none; border: 1px solid var(--border-color); display: inline-block; }
+        @media (max-width: 768px) { .split-payment-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="brand">Cleanup Sprint</a>
+            <nav>
+                <a href="process.html">How it works</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="preview.html" class="btn-preview">Get Free Preview</a>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="page-header">
+                <h2>Simple Pricing</h2>
+                <h1>Flat $195</h1>
+                <p>One price. Up to 30 listings. No hourly rates. Scope is confirmed before work begins.</p>
+            </div>
+
+            <div class="pricing-hero-card">
+                <div class="price-tag">$195</div>
+                <div class="price-sub">per sprint • up to 30 listings</div>
+                <div class="price-features">
+                    <strong>Includes manual verification,</strong> clear notes on anything that cannot be confirmed, and a clean file ready for your team.
+                </div>
+            </div>
+
+            <div class="split-payment-grid">
+                <div class="payment-card">
+                    <div class="pay-title">Deposit — On Kickoff</div>
+                    <div class="pay-amount">$97.50</div>
+                    <div class="pay-desc">Due after you approve the free preview and authorize the sprint.</div>
+                </div>
+                <div class="payment-card">
+                    <div class="pay-title">Balance — On Delivery</div>
+                    <div class="pay-amount">$97.50</div>
+                    <div class="pay-desc">Due only after you receive and accept the complete audited file.</div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>Zero-risk structure.</h3>
+                <p>The free preview comes first. Pricing, timing, and any work beyond 30 listings can be discussed before moving forward.</p>
+                <p>If the full work does not meet the agreed standard, the balance is not owed.</p>
+                <a href="preview.html" class="btn-action">Prepare an inquiry</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

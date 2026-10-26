@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleanup Sprint — Live Sample Output</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header { margin-bottom: 2.5rem; }
+        .page-header h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted-text); margin-bottom: 0.5rem; }
+        .page-header h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 1rem; }
+        .page-header p { color: var(--muted-text); font-size: 1.1rem; }
+        .sample-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.5rem; margin-bottom: 3rem; }
+        .sample-card-header { display: flex; justifyContent: space-between; align-items: center; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid #eee; }
+        .sample-card-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; color: var(--muted-text); }
+        .sample-badge { background-color: var(--accent-pink); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 4px; border: 1px solid var(--border-color); text-transform: uppercase; }
+        .spreadsheet-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem; }
+        .spreadsheet-table th, .spreadsheet-table td { padding: 0.75rem 0.5rem; border-bottom: 1px solid #eee; }
+        .spreadsheet-table th { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted-text); font-weight: 600; }
+        .spreadsheet-table tr:last-child td { border-bottom: none; }
+        .status-dot { height: 8px; width: 8px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+        .dot-green { background-color: #2e7d32; }
+        .dot-yellow { background-color: #ed6c02; }
+        .dot-red { background-color: #d32f2f; }
+        .inquiry-form-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 2rem; margin-bottom: 3rem; }
+        .inquiry-form-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .inquiry-form-card p { color: var(--muted-text); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .btn-submit { background-color: var(--accent-pink); color: var(--text-main); padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; border: 1px solid var(--border-color); cursor: pointer; font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="brand">Cleanup Sprint</a>
+            <nav>
+                <a href="process.html">How it works</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="preview.html" class="btn-preview">Get Free Preview</a>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="page-header">
+                <h2>No Commitment</h2>
+                <h1>Free preview</h1>
+                <p>A small set of fully checked listings so you can see the format, notes, and level of care before deciding.</p>
+            </div>
+
+            <div class="sample-card">
+                <div class="sample-card-header" style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="sample-card-title">Example Output</span>
+                    <span class="sample-badge">Sample</span>
+                </div>
+                <table class="spreadsheet-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Resource</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CS-1042</td>
+                            <td>Northside Housing Hub</td>
+                            <td><span class="status-dot dot-green"></span>Verified</td>
+                        </tr>
+                        <tr>
+                            <td>CS-1043</td>
+                            <td>WorkPath Employment Center</td>
+                            <td><span class="status-dot dot-yellow"></span>Pending review</td>
+                        </tr>
+                        <tr>
+                            <td>CS-1044</td>
+                            <td>Riverbend Food Pantry</td>
+                            <td><span class="status-dot dot-red"></span>Address mismatch</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="inquiry-form-card">
+                <h3>Tell me a little about your list.</h3>
+                <p>Nothing is sent until you choose to share it.</p>
+                
+                <form onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="org-name">Organization name</label>
+                        <input type="text" id="org-name" class="form-control" placeholder="Your organization">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="notes">Notes or link to your directory</label>
+                        <textarea id="notes" class="form-control" placeholder="e.g., Paste a link to your current member registry or describe the specific fields that need updating..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Prepare an inquiry</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

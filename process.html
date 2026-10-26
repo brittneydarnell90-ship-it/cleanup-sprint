@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleanup Sprint — Our Process</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header { margin-bottom: 3rem; }
+        .page-header h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted-text); margin-bottom: 0.5rem; }
+        .page-header h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 1rem; }
+        .page-header p { color: var(--muted-text); font-size: 1.1rem; }
+        .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
+        .step-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.75rem; }
+        .step-number { font-size: 1.5rem; font-weight: 700; color: var(--muted-text); margin-bottom: 1rem; }
+        .step-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .step-desc { font-size: 0.95rem; color: var(--muted-text); }
+        .roadmap-section { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 2rem; margin-bottom: 3rem; }
+        .roadmap-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; }
+        .roadmap-row { display: grid; grid-template-columns: 140px 1fr; padding: 1rem 0; border-bottom: 1px solid #eee; font-size: 0.95rem; }
+        .roadmap-row:last-child { border-bottom: none; }
+        .roadmap-day { font-weight: 700; color: var(--text-main); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; }
+        .roadmap-detail { color: var(--muted-text); }
+        @media (max-width: 768px) {
+            .steps-grid { grid-template-columns: 1fr; }
+            .roadmap-row { grid-template-columns: 1fr; gap: 0.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="brand">Cleanup Sprint</a>
+            <nav>
+                <a href="process.html">How it works</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="preview.html" class="btn-preview">Get Free Preview</a>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="page-header">
+                <h2>How it works</h2>
+                <h1>The process</h1>
+                <p>Three clear steps. Manual verification throughout. A focused five-day cleanup—not ongoing maintenance.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-title">You share the list</div>
+                    <div class="step-desc">Send a short description or a few sample records. We confirm scope before any work begins.</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-title">You receive a free preview</div>
+                    <div class="step-desc">A small set of fully checked listings so you can see the format, notes, and level of care.</div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-title">Full delivery in five days</div>
+                    <div class="step-desc">Manual checks against public sources. Clear notes on anything that cannot be confirmed. Clean file ready for your team.</div>
+                </div>
+            </div>
+
+            <div class="roadmap-section">
+                <div class="roadmap-title">Five-day milestone map</div>
+                <div class="roadmap-row">
+                    <div class="roadmap-day">Day 1</div>
+                    <div class="roadmap-detail">Intake, confirmation of scope, free preview delivered</div>
+                </div>
+                <div class="roadmap-row">
+                    <div class="roadmap-day">Day 2 – 3</div>
+                    <div class="roadmap-detail">Source checks, name • address • phone consistency, status review</div>
+                </div>
+                <div class="roadmap-row">
+                    <div class="roadmap-day">Day 4</div>
+                    <div class="roadmap-detail">Notes on unverifiable items, final structuring of the file</div>
+                </div>
+                <div class="roadmap-row">
+                    <div class="roadmap-day">Day 5</div>
+                    <div class="roadmap-detail">Delivery of the cleaned list and acceptance of remaining balance</div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

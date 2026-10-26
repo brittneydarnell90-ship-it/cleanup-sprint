@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleanup Sprint — Manual Resource List Verification</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            align-items: start;
+            margin-bottom: 4rem;
+        }
+        .hero-left h2 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted-text);
+            margin-bottom: 0.75rem;
+        }
+        .hero-left h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            letter-spacing: -0.03em;
+        }
+        .hero-left p {
+            font-size: 1.1rem;
+            color: var(--muted-text);
+            margin-bottom: 2rem;
+        }
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .btn-primary {
+            background-color: var(--accent-pink);
+            color: var(--text-main);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            display: inline-block;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            display: inline-block;
+        }
+        .meta-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+        }
+        .meta-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
+        }
+        .meta-row:last-child {
+            border-bottom: none;
+        }
+        .meta-label {
+            color: var(--muted-text);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+        .meta-value {
+            font-weight: 600;
+        }
+        .inquiry-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+        }
+        .inquiry-section h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+        .inquiry-section p {
+            color: var(--muted-text);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <a href="index.html" class="brand">Cleanup Sprint</a>
+            <nav>
+                <a href="process.html">How it works</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="preview.html" class="btn-preview">Get Free Preview</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <h2>Resource Directory Support</h2>
+                    <h1>I clean and verify resource listings.</h1>
+                    <p>Manual check of your directory or resource list. Done in five business days.</p>
+                    <div class="cta-group">
+                        <a href="preview.html" class="btn-primary">Prepare an inquiry</a>
+                        <a href="process.html" class="btn-secondary">How it works</a>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="meta-card">
+                        <div class="meta-row">
+                            <span class="meta-label">Turnaround</span>
+                            <span class="meta-value">5 business days</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-label">Scope</span>
+                            <span class="meta-value">Up to 30 listings</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-label">Start</span>
+                            <span class="meta-value">Free preview</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inquiry-section">
+                <h3>Tell me a little about your list.</h3>
+                <p>Put together a short inquiry below. You can copy the draft and share it through a contact method you choose.</p>
+                
+                <form onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="org-name">Organization name (optional)</label>
+                        <input type="text" id="org-name" class="form-control" placeholder="Your organization">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="inquiry-notes">What would you like help with?</label>
+                        <textarea id="inquiry-notes" class="form-control" placeholder="e.g., Paste a link to your current member registry or describe the specific fields that need updating..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Prepare an inquiry →</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
