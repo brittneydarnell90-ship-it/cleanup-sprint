@@ -67,10 +67,22 @@ nav a:hover {
     font-weight: 500;
     text-decoration: none;
     border: 1px solid var(--border-color);
+}
+
+/* Match the Get Free Preview hover effect on every call-to-action button. */
+.btn-preview,
+.btn-primary,
+.btn-secondary,
+.btn-submit,
+.btn-action {
     transition: opacity 0.2s;
 }
 
-.btn-preview:hover {
+.btn-preview:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-submit:hover,
+.btn-action:hover {
     opacity: 0.85;
 }
 
