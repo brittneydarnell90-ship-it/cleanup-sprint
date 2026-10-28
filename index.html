@@ -128,7 +128,7 @@
                     <h1>I clean and verify resource listings.</h1>
                     <p>Manual check of your directory or resource list. Done in five business days.</p>
                     <div class="cta-group">
-                        <a href="preview.html" class="btn-primary">Prepare an inquiry</a>
+                        <a href="#inquiry" class="btn-primary">Send an inquiry</a>
                         <a href="process.html" class="btn-secondary">How it works</a>
                     </div>
                 </div>
@@ -151,22 +151,29 @@
                 </div>
             </div>
 
-            <div class="inquiry-section">
+            <div class="inquiry-section" id="inquiry">
                 <h3>Tell me a little about your list.</h3>
-                <p>Put together a short inquiry below. You can copy the draft and share it through a contact method you choose.</p>
+                <p>Send a short inquiry about your resource list. I'll reply using the email address you provide.</p>
                 
-                <form onsubmit="event.preventDefault();">
+                <form action="https://formspree.io/f/xkjjrakb" method="POST">
+                    <input type="hidden" name="form_source" value="Cleanup Sprint homepage">
+
                     <div class="form-group">
                         <label for="org-name">Organization name (optional)</label>
-                        <input type="text" id="org-name" class="form-control" placeholder="Your organization">
+                        <input type="text" id="org-name" name="organization" class="form-control" autocomplete="organization" placeholder="Your organization">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email">Email address</label>
+                        <input type="email" id="contact-email" name="email" class="form-control" autocomplete="email" placeholder="you@example.com" required>
                     </div>
 
                     <div class="form-group" style="margin-bottom: 1.5rem;">
                         <label for="inquiry-notes">What would you like help with?</label>
-                        <textarea id="inquiry-notes" class="form-control" placeholder="e.g., Paste a link to your current member registry or describe the specific fields that need updating..."></textarea>
+                        <textarea id="inquiry-notes" name="message" class="form-control" placeholder="Tell me about your resource list and what needs checking or updating..." required></textarea>
                     </div>
 
-                    <button type="submit" class="btn-primary">Prepare an inquiry →</button>
+                    <button type="submit" class="btn-primary" style="cursor: pointer;">Send inquiry</button>
                 </form>
             </div>
         </main>
