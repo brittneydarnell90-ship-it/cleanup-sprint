@@ -81,20 +81,27 @@
 
             <div class="inquiry-form-card">
                 <h3>Tell me a little about your list.</h3>
-                <p>Nothing is sent until you choose to share it.</p>
+                <p>Request a free preview by sending a short note about your list. I'll reply using the email address you provide.</p>
                 
-                <form onsubmit="event.preventDefault();">
+                <form action="https://formspree.io/f/xkjjrakb" method="POST">
+                    <input type="hidden" name="form_source" value="Cleanup Sprint free preview page">
+
                     <div class="form-group">
-                        <label for="org-name">Organization name</label>
-                        <input type="text" id="org-name" class="form-control" placeholder="Your organization">
+                        <label for="org-name">Organization name (optional)</label>
+                        <input type="text" id="org-name" name="organization" class="form-control" autocomplete="organization" placeholder="Your organization">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email">Email address</label>
+                        <input type="email" id="contact-email" name="email" class="form-control" autocomplete="email" placeholder="you@example.com" required>
                     </div>
 
                     <div class="form-group" style="margin-bottom: 1.5rem;">
                         <label for="notes">Notes or link to your directory</label>
-                        <textarea id="notes" class="form-control" placeholder="e.g., Paste a link to your current member registry or describe the specific fields that need updating..."></textarea>
+                        <textarea id="notes" name="message" class="form-control" placeholder="Tell me about your directory, and include a link if you have one..." required></textarea>
                     </div>
 
-                    <button type="submit" class="btn-submit">Prepare an inquiry</button>
+                    <button type="submit" class="btn-submit">Request free preview</button>
                 </form>
             </div>
         </main>
