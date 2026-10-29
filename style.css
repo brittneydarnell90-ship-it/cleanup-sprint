@@ -11,7 +11,7 @@
   --text-charcoal: #1E1E1E;
   --accent-blush: #E8C5BE;
   --slate: #4A4E51;
-  --berry: #8E3E5C;
+  --berry: #E8C5BE; /* legacy alias; now the brand blush, never purple */
   --surface-flax: #F4EDE4;
   --surface-beige: #F5F2EE;
   --surface-warm: #F1E8DF;
@@ -255,8 +255,10 @@ hr, .section-divider { border: 0; border-top: 1px solid rgba(30, 30, 30, 0.15); 
 .btn-blush:hover, .btn-pink-luxury:hover {
   color: #FAF8F5; background: #1E1E1E;
 }
-.btn-berry, .btn-berry:visited, .btn-berry:active, .btn-berry:focus { color: #FAF8F5; background: var(--berry); border-color: var(--berry); }
-.btn-berry:hover { color: #FAF8F5; background: #703047; border-color: #703047; }
+.btn-berry, .btn-berry:visited, .btn-berry:active, .btn-berry:focus {
+  color: #1E1E1E; background: var(--accent-blush); border-color: #1E1E1E;
+}
+.btn-berry:hover { color: #FAF8F5; background: #1E1E1E; border-color: #1E1E1E; }
 .btn-dark, .btn-dark:visited, .btn-dark:active, .btn-dark:focus { color: #FAF8F5; background: #1E1E1E; }
 .btn-dark:hover { color: #1E1E1E; background: #E8C5BE; }
 .btn-ivory, .btn-ivory:visited, .btn-ivory:active, .btn-ivory:focus { color: #1E1E1E; background: #FAF8F5; border-color: #FAF8F5; }
@@ -459,15 +461,15 @@ hr, .section-divider { border: 0; border-top: 1px solid rgba(30, 30, 30, 0.15); 
 .package-card {
   min-height: 475px;
   padding: clamp(36px, 4.4vw, 66px);
-  background: var(--berry);
-  color: var(--bg-luxury-ivory);
-  border: 1px solid var(--berry);
+  background: var(--accent-blush);
+  color: var(--text-charcoal);
+  border: 1px solid rgba(30, 30, 30, 0.15);
   border-radius: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.package-card h2, .package-card p { color: var(--bg-luxury-ivory); }
+.package-card h2, .package-card p { color: var(--text-charcoal); }
 .package-eyebrow, .package-label {
   display: block;
   font-size: .69rem;
@@ -476,7 +478,7 @@ hr, .section-divider { border: 0; border-top: 1px solid rgba(30, 30, 30, 0.15); 
   line-height: 1.6;
   text-transform: uppercase;
 }
-.package-eyebrow { color: #F9E7EA; }
+.package-eyebrow { color: var(--text-charcoal); }
 .package-price {
   font: 400 clamp(5.5rem, 9vw, 9.4rem)/.93 var(--font-serif);
   letter-spacing: -.045em;
@@ -965,9 +967,9 @@ hr, .section-divider { border: 0; border-top: 1px solid rgba(30, 30, 30, 0.15); 
 #contact-portal button[type="submit"].btn-berry:focus,
 #contact-portal button[type="submit"].btn-berry:focus-visible,
 #contact-portal button[type="submit"].btn-berry:active {
-  background-color: var(--berry, #8E3E5C);
-  color: #FFFFFF;
-  border: 1px solid var(--berry, #8E3E5C);
+  background-color: var(--accent-blush);
+  color: #1E1E1E;
+  border: 1px solid #1E1E1E;
   border-radius: 0;
   font-weight: 500;
   text-transform: uppercase;
@@ -1042,4 +1044,77 @@ hr, .section-divider { border: 0; border-top: 1px solid rgba(30, 30, 30, 0.15); 
 }
 @media (prefers-reduced-motion: reduce) {
   #contact-portal button[type="submit"].btn-berry { transition: none; }
+}
+
+/* Warm-neutral package CTA: match blush card, charcoal type. */
+.package-card .btn-ivory,
+.package-card .btn-ivory:visited,
+.package-card .btn-ivory:active {
+  background: #FAF8F5;
+  border-color: #1E1E1E;
+  color: #1E1E1E;
+}
+.package-card .btn-ivory:hover {
+  background: #1E1E1E;
+  border-color: #1E1E1E;
+  color: #FAF8F5;
+}
+
+/* Three-column horizontal workflow, like the reference.
+   No arrow connectors or overlapping grid placements. */
+.slate-grey-section .steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(24px, 4.5vw, 72px);
+}
+.slate-grey-section .step {
+  min-width: 0;
+  padding-top: 1.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+}
+.slate-grey-section .step-head {
+  display: flex;
+  align-items: baseline;
+  gap: .95rem;
+  min-height: 6.4rem;
+  margin-bottom: .7rem;
+}
+.slate-grey-section .step .step-number {
+  display: inline-block;
+  flex: none;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(4rem, 5.4vw, 5.7rem);
+  line-height: .95;
+  letter-spacing: -.04em;
+  margin: 0;
+  color: var(--accent-blush);
+}
+.slate-grey-section .step-stage {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: .68rem;
+  line-height: 1.5;
+  letter-spacing: .15em;
+  color: #FAF8F5;
+}
+.slate-grey-section .step h3 {
+  margin: 0 0 1.1rem;
+  font-size: clamp(1.95rem, 2.5vw, 2.7rem);
+  line-height: 1.13;
+  color: #FAF8F5;
+}
+.slate-grey-section .step p {
+  margin: 0;
+  font-size: .98rem;
+  line-height: 1.75;
+  color: #FAF8F5;
+}
+@media (max-width: 680px) {
+  .slate-grey-section .steps-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.4rem;
+  }
+  .slate-grey-section .step-head { min-height: 5rem; }
 }
