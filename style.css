@@ -982,7 +982,7 @@ hr, .section-divider { border: 0; border-top: 1px solid rgba(30, 30, 30, 0.15); 
 
 /* Keep the notebook-and-tools photography as a horizontal editorial strip. */
 .field-notes-grid {
-  padding-block: clamp(76px, 8vw, 120px);
+  padding-block: clamp(90px, 10vw, 140px);
 }
 .field-notes-grid .notes-strip {
   width: 100%;
@@ -990,8 +990,8 @@ hr, .section-divider { border: 0; border-top: 1px solid rgba(30, 30, 30, 0.15); 
 }
 .field-notes-grid .notes-strip .photo-frame {
   width: 100%;
-  height: clamp(230px, 26vw, 340px);
-  max-height: 350px;
+  height: clamp(220px, 24vw, 300px);
+  max-height: 320px;
   aspect-ratio: auto;
   overflow: hidden;
 }
@@ -1014,8 +1014,21 @@ hr, .section-divider { border: 0; border-top: 1px solid rgba(30, 30, 30, 0.15); 
 .slate-grey-section a:active {
   color: #FAF8F5;
 }
-.slate-grey-section :is(.step, hr, .section-divider) {
-  border-color: rgba(255, 255, 255, 0.15);
+.slate-grey-section .step {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.slate-grey-section :is(hr, .section-divider) {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.slate-grey-section .step .step-number {
+  display: block;
+  margin-bottom: 2.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.15em;
+  color: #FAF8F5;
 }
 .slate-grey-section .step-connector {
   color: #FAF8F5;
