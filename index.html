@@ -113,12 +113,23 @@
   </section>
   <section id="inquiry" class="inquiry"><div class="wrap inquiry-grid">
     <div><span class="eyebrow">GET IN TOUCH</span><h2>Tell me a little about your list.</h2><p>Send a short inquiry about your resource list. I'll reply using the email address you provide.</p></div>
-    <form action="https://formspree.io/f/xkjjrakb" method="POST">
+    <form id="contact-portal" action="https://formspree.io/f/xkjjrakb" method="POST">
       <input type="hidden" name="form_source" value="Cleanup Sprint homepage">
-      <div class="form-group"><label for="org-name">Organization name (optional)</label><input type="text" id="org-name" name="organization" autocomplete="organization" placeholder="Your organization"></div>
-      <div class="form-group"><label for="contact-email">Email address</label><input type="email" id="contact-email" name="email" autocomplete="email" placeholder="you@example.com" required></div>
-      <div class="form-group"><label for="inquiry-notes">What would you like help with?</label><textarea id="inquiry-notes" name="message" rows="5" placeholder="Tell me about your resource list and what needs checking or updating..." required></textarea></div>
-      <button class="btn btn-blush" type="submit">SEND INQUIRY <span aria-hidden="true">→</span></button>
+      <div class="form-group">
+        <label for="org-name">Organization name (optional)</label>
+        <input type="text" id="org-name" name="organization" autocomplete="organization" placeholder="e.g., The Community Coalition">
+      </div>
+      <div class="form-group">
+        <label for="contact-email">Email address</label>
+        <input type="email" id="contact-email" name="email" autocomplete="email" placeholder="name@organization.org" aria-describedby="contact-email-error" required>
+        <span class="error-message" id="contact-email-error">Please enter a valid email address.</span>
+      </div>
+      <div class="form-group">
+        <label for="inquiry-notes">What would you like help with?</label>
+        <textarea id="inquiry-notes" name="message" rows="5" placeholder="Describe the resource list or specific details you need verified..." aria-describedby="inquiry-notes-error" required></textarea>
+        <span class="error-message" id="inquiry-notes-error">Please describe what you need help with.</span>
+      </div>
+      <button class="btn btn-dark" type="submit">SEND INQUIRY <span aria-hidden="true">→</span></button>
     </form>
   </div></section>
 </main>
