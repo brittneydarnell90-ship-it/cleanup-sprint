@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (group) group.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'center' });
       firstInvalid.focus({ preventScroll: true });
     }
-    // If valid, let the browser POST directly to the existing Formspree endpoint.
+    // If valid, let the browser POST directly to Web3Forms.
   });
 
   form.querySelectorAll('input, textarea').forEach((input) => {
