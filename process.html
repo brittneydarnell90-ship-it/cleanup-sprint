@@ -1,88 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cleanup Sprint — Our Process</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .page-header { margin-bottom: 3rem; }
-        .page-header h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted-text); margin-bottom: 0.5rem; }
-        .page-header h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 1rem; }
-        .page-header p { color: var(--muted-text); font-size: 1.1rem; }
-        .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
-        .step-card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.75rem; }
-        .step-number { font-size: 1.5rem; font-weight: 700; color: var(--muted-text); margin-bottom: 1rem; }
-        .step-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .step-desc { font-size: 0.95rem; color: var(--muted-text); }
-        .roadmap-section { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 2rem; margin-bottom: 3rem; }
-        .roadmap-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; }
-        .roadmap-row { display: grid; grid-template-columns: 140px 1fr; padding: 1rem 0; border-bottom: 1px solid #eee; font-size: 0.95rem; }
-        .roadmap-row:last-child { border-bottom: none; }
-        .roadmap-day { font-weight: 700; color: var(--text-main); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; }
-        .roadmap-detail { color: var(--muted-text); }
-        @media (max-width: 768px) {
-            .steps-grid { grid-template-columns: 1fr; }
-            .roadmap-row { grid-template-columns: 1fr; gap: 0.25rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cleanup Sprint's five-business-day manual verification process, deliverables, and $195 flat-rate pricing for up to 30 resource listings.">
+  <title>Process &amp; Rates — Cleanup Sprint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home-editorial.css">
+  <link rel="stylesheet" href="process-editorial.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="index.html" class="brand">Cleanup Sprint</a>
-            <nav>
-                <a href="process.html">How it works</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="preview.html" class="btn-preview">Get Free Preview</a>
-            </nav>
-        </header>
-        
-        <main>
-            <div class="page-header">
-                <h2>How it works</h2>
-                <h1>The process</h1>
-                <p>Three clear steps. Manual verification throughout. A focused five-day cleanup—not ongoing maintenance.</p>
-            </div>
-
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">01</div>
-                    <div class="step-title">You share the list</div>
-                    <div class="step-desc">Send a short description or a few sample records. We confirm scope before any work begins.</div>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">02</div>
-                    <div class="step-title">You receive a free preview</div>
-                    <div class="step-desc">A small set of fully checked listings so you can see the format, notes, and level of care.</div>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">03</div>
-                    <div class="step-title">Full delivery in five days</div>
-                    <div class="step-desc">Manual checks against public sources. Clear notes on anything that cannot be confirmed. Clean file ready for your team.</div>
-                </div>
-            </div>
-
-            <div class="roadmap-section">
-                <div class="roadmap-title">Five-day milestone map</div>
-                <div class="roadmap-row">
-                    <div class="roadmap-day">Day 1</div>
-                    <div class="roadmap-detail">Intake, confirmation of scope, free preview delivered</div>
-                </div>
-                <div class="roadmap-row">
-                    <div class="roadmap-day">Day 2 – 3</div>
-                    <div class="roadmap-detail">Source checks, name • address • phone consistency, status review</div>
-                </div>
-                <div class="roadmap-row">
-                    <div class="roadmap-day">Day 4</div>
-                    <div class="roadmap-detail">Notes on unverifiable items, final structuring of the file</div>
-                </div>
-                <div class="roadmap-row">
-                    <div class="roadmap-day">Day 5</div>
-                    <div class="roadmap-detail">Delivery of the cleaned list and acceptance of remaining balance</div>
-                </div>
-            </div>
-        </main>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap">
+  <a class="brand" href="index.html">
+    <span class="logo-text">CLEANUP SPRINT</span>
+    <span class="tagline">RESOURCE DIRECTORY VERIFICATION &amp; ORGANIZATION</span>
+  </a>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="index.html#services">SERVICES</a>
+    <a href="process.html" aria-current="page">PROCESS &amp; PRICING</a>
+    <a href="index.html#about">ABOUT</a>
+    <a href="preview.html" class="btn btn-blush">GET FREE PREVIEW <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
+<main id="main">
+  <section class="process-hero">
+    <div class="wrap process-hero-grid">
+      <div>
+        <span class="eyebrow">THE FRAMEWORK</span>
+        <h1>A meticulous path to clearer resource information.</h1>
+        <p class="hero-subtext">No automated bulk data collection. Manual checks, clear notes, and a focused five-business-day schedule. Every record in the agreed scope is reviewed, and details that cannot be confirmed are flagged.</p>
+        <div class="actions">
+          <a href="preview.html" class="btn btn-dark">GET FREE PREVIEW <span aria-hidden="true">→</span></a>
+          <a href="#timeline" class="btn btn-outline">EXPLORE THE PROCESS</a>
+        </div>
+      </div>
+      <div class="workflow-visual" aria-label="Illustrative directory review worksheet">
+        <div class="workflow-paper">
+          <div class="workflow-paper-header"><span>CLEANUP SPRINT / WORKFLOW</span><span>01 — 05</span></div>
+          <h2>Verification notes</h2>
+          <div class="workflow-paper-row"><span>01</span><span>Intake &amp; baseline</span><small>Review</small></div>
+          <div class="workflow-paper-row"><span>02</span><span>Check source details</span><small>Confirm</small></div>
+          <div class="workflow-paper-row"><span>03</span><span>Record findings</span><small>Flag</small></div>
+          <div class="workflow-paper-row"><span>04</span><span>Prepare clean file</span><small>Deliver</small></div>
+        </div>
+      </div>
     </div>
+  </section>
+  <section class="section-space wrap" id="timeline">
+    <div class="process-section-title">
+      <span class="eyebrow">TIMELINE STRUCTURE</span>
+      <h2>The five-business-day breakdown.</h2>
+      <p>What to expect after you approve the preview, agree on the scope, and authorize the full sprint.</p>
+    </div>
+    <div class="workflow-stages">
+      <article class="workflow-stage">
+        <span class="day-label">Days 01—02</span>
+        <h3>Intake &amp; base audit</h3>
+        <p>Review the submitted list, confirm the fields and resource categories, identify broken links, and flag details that need further checks.</p>
+      </article>
+      <article class="workflow-stage">
+        <span class="day-label">Days 03—04</span>
+        <h3>Manual verification</h3>
+        <p>Check available sources for contact information, services, and eligibility details. Contact programs where needed and feasible. Record anything still unconfirmed instead of guessing.</p>
+      </article>
+      <article class="workflow-stage">
+        <span class="day-label">Day 05</span>
+        <h3>Organization &amp; delivery</h3>
+        <p>Apply consistent formatting, finalize the review notes, and deliver the cleaned directory file with clearly identified outstanding questions.</p>
+      </article>
+    </div>
+  </section>
+  <section class="pricing-area" id="rates">
+    <div class="wrap pricing-panel">
+      <div>
+        <span class="eyebrow">FLAT-RATE MODEL</span>
+        <div class="pricing-amount">$195</div>
+        <span class="metric-label">PER PILOT SPRINT / UP TO 30 LISTINGS</span>
+      </div>
+      <div class="pricing-side">
+        <h2>Defined scope. Clear deliverables.</h2>
+        <p>One flat-rate cleanup of up to 30 resource listings. A free preview comes first. The full sprint begins once you approve the scope and confirm the project.</p>
+        <div class="pricing-points">
+          <div><strong>$97.50</strong><span>Deposit after approval and kickoff</span></div>
+          <div><strong>$97.50</strong><span>Balance after file delivery and acceptance</span></div>
+        </div>
+        <ul class="deliverables">
+          <li>— Clean, organized CSV or spreadsheet handoff</li>
+          <li>— Verification notes and a list of unconfirmed fields</li>
+          <li>— Free preview of a small sample before committing</li>
+        </ul>
+        <p>Scope, timing, and any requests beyond 30 listings are confirmed before paid work begins. If the delivered work does not meet the agreed standard, the remaining balance is not owed.</p>
+        <div class="pricing-actions">
+          <a href="preview.html" class="btn btn-dark">GET FREE PREVIEW <span aria-hidden="true">→</span></a>
+          <a href="pricing.html" class="btn btn-outline">FULL PRICING DETAILS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrap process-outro section-space">
+    <h2>Ready for a directory your team can use?</h2>
+    <div>
+      <p>Start with a no-commitment preview or send a short inquiry about the records you need checked. You'll know the scope before any paid sprint begins.</p>
+      <div class="actions">
+        <a href="preview.html" class="btn btn-blush">GET FREE PREVIEW <span aria-hidden="true">→</span></a>
+        <a href="index.html#inquiry" class="btn btn-outline">CONTACT PORTAL</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer wrap">
+  <div><strong>CLEANUP SPRINT</strong><span>RESOURCE DIRECTORY VERIFICATION &amp; ORGANIZATION</span></div>
+  <nav aria-label="Footer navigation"><a href="index.html">Home</a><a href="preview.html">Free preview</a><a href="pricing.html">Pricing</a></nav>
+  <small>© 2026 Cleanup Sprint</small>
+</footer>
 </body>
 </html>
