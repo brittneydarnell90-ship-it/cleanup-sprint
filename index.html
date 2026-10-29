@@ -1,183 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cleanup Sprint — Manual Resource List Verification</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 3rem;
-            align-items: start;
-            margin-bottom: 4rem;
-        }
-        .hero-left h2 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--muted-text);
-            margin-bottom: 0.75rem;
-        }
-        .hero-left h1 {
-            font-size: 2.75rem;
-            font-weight: 700;
-            line-height: 1.15;
-            margin-bottom: 1rem;
-            letter-spacing: -0.03em;
-        }
-        .hero-left p {
-            font-size: 1.1rem;
-            color: var(--muted-text);
-            margin-bottom: 2rem;
-        }
-        .cta-group {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-        .btn-primary {
-            background-color: var(--accent-pink);
-            color: var(--text-main);
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-            text-decoration: none;
-            border: 1px solid var(--border-color);
-            display: inline-block;
-        }
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--text-main);
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-            text-decoration: none;
-            border: 1px solid var(--border-color);
-            display: inline-block;
-        }
-        .meta-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 1.5rem;
-        }
-        .meta-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #eee;
-            font-size: 0.95rem;
-        }
-        .meta-row:last-child {
-            border-bottom: none;
-        }
-        .meta-label {
-            color: var(--muted-text);
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 0.05em;
-            font-weight: 600;
-        }
-        .meta-value {
-            font-weight: 600;
-        }
-        .inquiry-section {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 2.5rem;
-            margin-top: 3rem;
-        }
-        .inquiry-section h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-        .inquiry-section p {
-            color: var(--muted-text);
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
-        }
-        @media (max-width: 768px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cleanup Sprint verifies and organizes nonprofit and reentry resource directories. Up to 30 listings, $195 flat rate, five-business-day delivery.">
+  <title>Cleanup Sprint — Resource Directory Verification &amp; Organization</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home-editorial.css">
 </head>
 <body>
-
-    <div class="container">
-        <header>
-            <a href="index.html" class="brand">Cleanup Sprint</a>
-            <nav>
-                <a href="process.html">How it works</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="preview.html" class="btn-preview">Get Free Preview</a>
-            </nav>
-        </header>
-
-        <main>
-            <div class="hero-grid">
-                <div class="hero-left">
-                    <h2>Resource Directory Support</h2>
-                    <h1>I clean and verify resource listings.</h1>
-                    <p>Manual check of your directory or resource list. Done in five business days.</p>
-                    <div class="cta-group">
-                        <a href="#inquiry" class="btn-primary">Send an inquiry</a>
-                        <a href="process.html" class="btn-secondary">How it works</a>
-                    </div>
-                </div>
-
-                <div class="hero-right">
-                    <div class="meta-card">
-                        <div class="meta-row">
-                            <span class="meta-label">Turnaround</span>
-                            <span class="meta-value">5 business days</span>
-                        </div>
-                        <div class="meta-row">
-                            <span class="meta-label">Scope</span>
-                            <span class="meta-value">Up to 30 listings</span>
-                        </div>
-                        <div class="meta-row">
-                            <span class="meta-label">Start</span>
-                            <span class="meta-value">Free preview</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="inquiry-section" id="inquiry">
-                <h3>Tell me a little about your list.</h3>
-                <p>Send a short inquiry about your resource list. I'll reply using the email address you provide.</p>
-                
-                <form action="https://formspree.io/f/xkjjrakb" method="POST">
-                    <input type="hidden" name="form_source" value="Cleanup Sprint homepage">
-
-                    <div class="form-group">
-                        <label for="org-name">Organization name (optional)</label>
-                        <input type="text" id="org-name" name="organization" class="form-control" autocomplete="organization" placeholder="Your organization">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contact-email">Email address</label>
-                        <input type="email" id="contact-email" name="email" class="form-control" autocomplete="email" placeholder="you@example.com" required>
-                    </div>
-
-                    <div class="form-group" style="margin-bottom: 1.5rem;">
-                        <label for="inquiry-notes">What would you like help with?</label>
-                        <textarea id="inquiry-notes" name="message" class="form-control" placeholder="Tell me about your resource list and what needs checking or updating..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-primary" style="cursor: pointer;">Send inquiry</button>
-                </form>
-            </div>
-        </main>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap">
+  <a class="brand" href="index.html"><span class="logo-text">CLEANUP SPRINT</span><span class="tagline">RESOURCE DIRECTORY VERIFICATION &amp; ORGANIZATION</span></a>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="#services">SERVICES</a>
+    <a href="#how-it-works">HOW IT WORKS</a>
+    <a href="pricing.html">PRICING</a>
+    <a href="#about">ABOUT</a>
+    <a class="btn btn-blush" href="preview.html">GET FREE PREVIEW <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">RESOURCE DIRECTORY SUPPORT</span>
+        <h1>Better information.<br>Fewer dead ends.</h1>
+        <p class="hero-subtext">I help small nonprofits and reentry organizations verify and organize resource directories so staff can spend less time checking listings and more time supporting the people who need it.</p>
+        <div class="actions"><a class="btn btn-dark" href="preview.html">GET FREE PREVIEW <span aria-hidden="true">→</span></a><a class="btn btn-outline" href="#how-it-works">SEE HOW IT WORKS</a></div>
+        <p class="fineprint">MANUAL VERIFICATION <span aria-hidden="true">·</span> ORGANIZED RECORDS <span aria-hidden="true">·</span> FIVE-BUSINESS-DAY DELIVERY</p>
+      </div>
+      <div class="hero-visual" aria-label="Sample resource directory dashboard design">
+        <div class="visual-ground" aria-hidden="true"></div>
+        <div class="dashboard">
+          <div class="dashboard-header"><div><span class="tiny-label">CLEANUP SPRINT / SAMPLE</span><h2>Directory overview</h2></div><span class="tiny-label">EXAMPLE ONLY</span></div>
+          <div class="dashboard-controls"><div class="faux-search">⌕ &nbsp; Search resources</div><div class="faux-filter">All categories &nbsp;⌄</div></div>
+          <div class="table-scroller">
+            <table class="sample-table">
+              <thead><tr><th scope="col">RESOURCE</th><th scope="col">CATEGORY</th><th scope="col">REVIEW NOTE</th></tr></thead>
+              <tbody>
+                <tr><td>Housing support service</td><td>Housing</td><td><span class="status">Checked</span></td></tr>
+                <tr><td>Employment assistance</td><td>Employment</td><td><span class="status soft">Updated</span></td></tr>
+                <tr><td>Family service referral</td><td>Family</td><td><span class="status outlined">Follow-up</span></td></tr>
+                <tr><td>Community health service</td><td>Health</td><td><span class="status">Checked</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="dash-summary"><div><strong>01</strong><span>Review</span></div><div><strong>02</strong><span>Document</span></div><div><strong>03</strong><span>Organize</span></div></div>
+        </div>
+        <span class="caption">Illustrative layout showing how findings are organized.</span>
+      </div>
     </div>
-
+  </section>
+  <section id="services" class="services section-space wrap">
+    <div class="section-heading"><span class="eyebrow">WHAT THE WORK INCLUDES</span><h2>Reliable directory cleanup, without the confusion.</h2><p>Cleanup Sprint focuses on the practical side of referral information: checking it, organizing it, and making it easier for your team to use.</p></div>
+    <div class="features-grid">
+      <article class="feature">
+        <svg class="line-icon" aria-hidden="true" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="m8 25 11 11L40 12"/></svg>
+        <span class="feature-index">01 / VERIFY</span><h3>Data verification</h3>
+        <p>I manually check the details in your directory, including contact information, service availability, and listing accuracy. The goal is simple: fewer dead ends and cleaner information.</p>
+        <ul><li>Contact details reviewed</li><li>Broken or outdated information flagged</li><li>Listings cleaned for consistency</li></ul>
+      </article>
+      <article class="feature">
+        <svg class="line-icon" aria-hidden="true" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"><ellipse cx="24" cy="11" rx="15" ry="6"/><path d="M9 11v12c0 3.4 6.7 6 15 6s15-2.6 15-6V11M9 23v12c0 3.4 6.7 6 15 6s15-2.6 15-6V23"/></svg>
+        <span class="feature-index">02 / ORGANIZE</span><h3>Referral infrastructure</h3>
+        <p>I help shape your listings into something staff can use more easily. That means better formatting, cleaner categories, and a structure that supports clear referrals.</p>
+        <ul><li>Easier-to-scan listing structure</li><li>Cleaner service categories</li><li>More usable internal organization</li></ul>
+      </article>
+      <article class="feature">
+        <svg class="line-icon" aria-hidden="true" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="9" r="5"/><circle cx="9" cy="37" r="5"/><circle cx="39" cy="37" r="5"/><path d="M21.5 13.5 11.5 32.5M26.5 13.5l10 19M14 37h20"/></svg>
+        <span class="feature-index">03 / SUPPORT</span><h3>Verified partner networks</h3>
+        <p>When your information is clearer, your referral network becomes stronger. Reviewed listings help your team make referrals with more confidence and less guesswork.</p>
+        <ul><li>Stronger partner visibility</li><li>More dependable referral handoffs</li><li>Greater confidence in shared information</li></ul>
+      </article>
+    </div>
+  </section>
+  <section class="metrics-band" aria-label="Commercial terms"><div class="wrap metrics-grid">
+    <div class="metric"><span class="metric-value">$195</span><span class="metric-label">FLAT-RATE PILOT SPRINT</span><p>Up to 30 resource listings per sprint.</p></div>
+    <div class="metric"><span class="metric-value">5 <small>business days</small></span><span class="metric-label">CLEAR TURNAROUND WINDOW</span><p>Delivery after scope and kickoff are agreed.</p></div>
+    <div class="metric"><span class="metric-value">100% <small>integrity commitment</small></span><span class="metric-label">EVERY LISTING REVIEWED</span><p>No invented information. Unconfirmed details flagged clearly.</p></div>
+  </div></section>
+  <section id="about" class="about wrap section-space">
+    <div class="about-copy"><span class="eyebrow">FOUNDER</span><h2>Peer-led care, backed by precise administrative work.</h2>
+      <p>I created Cleanup Sprint around one simple belief: the quality of information matters because real people depend on it.</p>
+      <p>Through my lived experience with reentry and my administrative background, I understand the importance of dependable systems, clear communication, and information people can actually use.</p>
+      <p>This is hands-on work. Each listing is reviewed manually, organized thoughtfully, and prepared with the needs of real staff and real clients in mind.</p>
+      <div class="principles"><span>01 / Verify contacts</span><span>02 / Update listings</span><span>03 / Organize categories</span><span>04 / Flag unconfirmed</span></div>
+    </div>
+    <div class="about-visual" aria-label="Illustrated stationery and organized verification notes">
+      <div class="stationery">
+        <div class="notebook"><div class="notebook-meta"><span>FIELD NOTES</span><span>01—04</span></div><h3>Directory review</h3><div class="paper-line"></div><p>Verify contact details</p><p>Review service information</p><p>Organize categories</p><p>Flag unconfirmed details</p></div>
+        <div class="pen" aria-hidden="true"></div>
+      </div><p class="caption">Careful review. Clear documentation. Practical results.</p>
+    </div>
+  </section>
+  <section id="how-it-works" class="process section-space"><div class="wrap">
+    <div class="section-heading"><span class="eyebrow">HOW IT WORKS</span><h2>Simple from start to finish.</h2></div>
+    <div class="steps-grid">
+      <div class="step"><span>01</span><h3>Send your directory</h3><p>Share the resource list you want reviewed. We'll confirm scope before paid work begins.</p></div>
+      <div class="step"><span>02</span><h3>I review and organize</h3><p>Up to 30 listings receive manual checks, consistent formatting, and clear notes on unconfirmed details.</p></div>
+      <div class="step"><span>03</span><h3>Receive your clean file</h3><p>Get an organized directory with a record of what was checked, updated, or flagged.</p></div>
+    </div><a class="text-link" href="process.html">VIEW THE COMPLETE FIVE-DAY PROCESS <span aria-hidden="true">→</span></a>
+  </div></section>
+  <section class="closing wrap section-space">
+    <h2>Your staff's time belongs with the people they serve.</h2>
+    <div><p>Checking resource information is necessary work. It doesn't have to take time away from everything else your team is responsible for.</p><p>See what a more organized, verification-focused resource directory could look like.</p>
+    <div class="actions"><a class="btn btn-blush" href="preview.html">GET FREE PREVIEW <span aria-hidden="true">→</span></a><a class="btn btn-outline" href="#inquiry">PREPARE AN INQUIRY</a></div></div>
+  </section>
+  <section id="inquiry" class="inquiry"><div class="wrap inquiry-grid">
+    <div><span class="eyebrow">GET IN TOUCH</span><h2>Tell me a little about your list.</h2><p>Send a short inquiry about your resource list. I'll reply using the email address you provide.</p></div>
+    <form action="https://formspree.io/f/xkjjrakb" method="POST">
+      <input type="hidden" name="form_source" value="Cleanup Sprint homepage">
+      <div class="form-group"><label for="org-name">Organization name (optional)</label><input type="text" id="org-name" name="organization" autocomplete="organization" placeholder="Your organization"></div>
+      <div class="form-group"><label for="contact-email">Email address</label><input type="email" id="contact-email" name="email" autocomplete="email" placeholder="you@example.com" required></div>
+      <div class="form-group"><label for="inquiry-notes">What would you like help with?</label><textarea id="inquiry-notes" name="message" rows="5" placeholder="Tell me about your resource list and what needs checking or updating..." required></textarea></div>
+      <button class="btn btn-blush" type="submit">SEND INQUIRY <span aria-hidden="true">→</span></button>
+    </form>
+  </div></section>
+</main>
+<footer class="footer wrap"><div><strong>CLEANUP SPRINT</strong><span>RESOURCE DIRECTORY VERIFICATION &amp; ORGANIZATION</span></div><nav aria-label="Footer navigation"><a href="preview.html">Free preview</a><a href="pricing.html">Pricing</a><a href="process.html">Process</a></nav><small>© 2026 Cleanup Sprint</small></footer>
 </body>
 </html>
