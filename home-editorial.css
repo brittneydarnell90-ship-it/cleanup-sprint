@@ -26,3 +26,26 @@ a{color:inherit}button,input,textarea{font:inherit}p{font-size:1rem;line-height:
 .step-connector{display:flex;justify-content:center;align-items:center;opacity:.4;align-self:start;margin-top:23px}
 .step-connector svg{display:block;width:40px;height:40px}
 @media(max-width:900px){.steps-grid{grid-template-columns:1fr;gap:35px}.step-connector{display:none}}
+
+/* Editorial line-input contact portal */
+#inquiry{padding:6rem 0}
+#inquiry form{background:transparent;border:0;padding:0;max-width:650px;width:100%;margin:0}
+#contact-portal .form-group{position:relative;margin-bottom:3.5rem}
+#contact-portal .form-group label{display:block;font-size:.75rem;letter-spacing:.1em;font-weight:500;text-transform:uppercase;margin-bottom:.5rem;color:rgba(30,30,30,.65);transition:color .3s ease}
+#contact-portal .form-group input[type="text"],
+#contact-portal .form-group input[type="email"],
+#contact-portal .form-group textarea{display:block;width:100%;background:transparent;border:0;border-bottom:1px solid rgba(30,30,30,.25);padding:.75rem 0;color:var(--ink);font-family:var(--sans);font-size:1.05rem;font-weight:400;border-radius:0;outline:0;transition:border-color .25s ease,padding-left .25s ease}
+#contact-portal .form-group textarea{min-height:100px;resize:vertical}
+#contact-portal .form-group:focus-within label{color:var(--ink)}
+#contact-portal .form-group input:focus,
+#contact-portal .form-group textarea:focus{border-bottom:2px solid var(--ink);padding-left:.5rem}
+#contact-portal .form-group input:focus-visible,
+#contact-portal .form-group textarea:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+#contact-portal .form-group input:user-invalid,
+#contact-portal .form-group textarea:user-invalid{border-bottom-color:#C94A4A}
+#contact-portal .error-message{position:absolute;bottom:-1.65rem;left:0;color:#B33636;font-size:.75rem;line-height:1.3;letter-spacing:.01em;visibility:hidden;opacity:0;transform:translateY(-4px);transition:opacity .2s,transform .2s}
+#contact-portal input:user-invalid ~ .error-message,
+#contact-portal textarea:user-invalid ~ .error-message{visibility:visible;opacity:1;transform:translateY(0)}
+#contact-portal button{min-width:190px}
+@media(max-width:760px){#inquiry{padding:4rem 0}#contact-portal .form-group{margin-bottom:3rem}}
+@media(prefers-reduced-motion:reduce){#contact-portal .form-group label,#contact-portal .form-group input,#contact-portal .form-group textarea,#contact-portal .error-message{transition:none}}
