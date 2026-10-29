@@ -955,3 +955,78 @@ hr, .section-divider { border: 0; border-top: 1px solid rgba(30, 30, 30, 0.15); 
 @media (prefers-reduced-motion: reduce) {
   .nav-links a::after { transition: none; }
 }
+
+
+/* Precision polish: only the homepage inquiry submit, field-notes strip, and slate workflow */
+
+/* Form submit is a button, so browser :visited does not apply.
+   Explicit resting, focus and active states prevent link-color overrides. */
+#contact-portal button[type="submit"].btn-berry,
+#contact-portal button[type="submit"].btn-berry:focus,
+#contact-portal button[type="submit"].btn-berry:focus-visible,
+#contact-portal button[type="submit"].btn-berry:active {
+  background-color: var(--berry, #8E3E5C);
+  color: #FFFFFF;
+  border: 1px solid var(--berry, #8E3E5C);
+  border-radius: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+#contact-portal button[type="submit"].btn-berry:hover {
+  background-color: #1E1E1E;
+  color: #FAF8F5;
+  border-color: #1E1E1E;
+}
+
+/* Keep the notebook-and-tools photography as a horizontal editorial strip. */
+.field-notes-grid {
+  padding-block: clamp(76px, 8vw, 120px);
+}
+.field-notes-grid .notes-strip {
+  width: 100%;
+  max-width: 100%;
+}
+.field-notes-grid .notes-strip .photo-frame {
+  width: 100%;
+  height: clamp(230px, 26vw, 340px);
+  max-height: 350px;
+  aspect-ratio: auto;
+  overflow: hidden;
+}
+.field-notes-grid .notes-strip .photo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* One scoped slate-grey band; no change to the ivory site canvas. */
+.slate-grey-section {
+  background-color: #4A4E51;
+  color: #FAF8F5;
+}
+.slate-grey-section :is(h1, h2, h3, h4, p, .step-number, .eyebrow),
+.slate-grey-section a,
+.slate-grey-section a:visited,
+.slate-grey-section a:active {
+  color: #FAF8F5;
+}
+.slate-grey-section :is(.step, hr, .section-divider) {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.slate-grey-section .step-connector {
+  color: #FAF8F5;
+}
+.slate-grey-section .text-link {
+  color: #FAF8F5;
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+.slate-grey-section .text-link:hover {
+  color: #F2CBD9;
+}
+@media (prefers-reduced-motion: reduce) {
+  #contact-portal button[type="submit"].btn-berry { transition: none; }
+}
