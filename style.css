@@ -961,3 +961,115 @@ textarea.form-control { min-height: 120px; resize: vertical; }
   .editorial-service .service-overline { margin-bottom: 17px; }
   .editorial-service .service-note { margin-top: 22px; }
 }
+
+
+/* 17 — Boutique consultation cards and consistent editorial section labels */
+:root { --consultation-beige: #F5F2EE; }
+.eyebrow,
+.section-meta,
+.editorial-kicker,
+.testimonial-heading,
+.client-love-heading {
+  font-family: var(--font-serif);
+  font-size: .95rem;
+  font-weight: 500;
+  letter-spacing: .15em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.inquiry .intake-intro,
+.archive-intake-layout .intake-intro {
+  max-width: 540px;
+  margin: 18px 0 25px;
+  color: var(--archive-espresso);
+  font: 400 clamp(1.5rem,2.2vw,1.95rem)/1.34 var(--font-serif);
+}
+#inquiry form.consultation-form,
+.archive-intake-layout form.consultation-form {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: clamp(28px,4vw,58px);
+  background: var(--consultation-beige);
+  border: 1px solid rgba(30,30,30,.15);
+  border-radius: 0;
+  box-shadow: none;
+}
+.consultation-form-heading {
+  margin-bottom: 33px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(30,30,30,.15);
+}
+.consultation-form-heading .eyebrow { margin-bottom: 11px; }
+.consultation-form-heading h3 {
+  margin-bottom: 10px;
+  font: 400 clamp(2.25rem,3vw,3rem)/1.08 var(--font-serif);
+  letter-spacing: -.017em;
+}
+.consultation-form-heading p { margin: 0; font-size: .88rem; }
+#contact-portal.consultation-form .form-group,
+#preview-portal.consultation-form .form-group {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.consultation-form .form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #51463F;
+  font: 500 .72rem/1.55 var(--font-sans);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+#contact-portal.consultation-form .form-group input,
+#contact-portal.consultation-form .form-group textarea,
+#preview-portal.consultation-form .form-control {
+  display: block;
+  width: 100%;
+  padding: 14px 3px 17px;
+  border: 0;
+  border-bottom: 1px solid rgba(30,30,30,.30);
+  border-radius: 0;
+  outline: 0;
+  box-shadow: none;
+  color: var(--text-charcoal);
+  background: transparent;
+  font: 300 1.05rem/1.65 var(--font-sans);
+  transition: padding-left .6s var(--luxury-motion), border-color .4s ease;
+}
+.consultation-form .form-group input::placeholder,
+.consultation-form .form-group textarea::placeholder {
+  color: #766C64;
+  opacity: .85;
+}
+#contact-portal.consultation-form .form-group :is(input, textarea):focus,
+#preview-portal.consultation-form .form-control:focus {
+  padding-left: 9px;
+  border-bottom-color: var(--text-charcoal);
+}
+#contact-portal.consultation-form .form-group :is(input, textarea):focus-visible,
+#preview-portal.consultation-form .form-control:focus-visible {
+  outline: 2px solid var(--text-charcoal);
+  outline-offset: 4px;
+}
+#contact-portal.consultation-form .form-group.has-error :is(input, textarea),
+#contact-portal.consultation-form .form-group :is(input, textarea):user-invalid,
+#preview-portal.consultation-form .form-control:user-invalid {
+  border-bottom-color: #C94A4A;
+}
+#contact-portal.consultation-form button,
+#preview-portal.consultation-form button {
+  margin-top: 5px;
+  min-width: min(100%,245px);
+}
+#contact-portal.consultation-form .form-assurance { margin-top: 16px; }
+@media (max-width: 760px) {
+  #inquiry form.consultation-form,
+  .archive-intake-layout form.consultation-form { padding: 29px 23px; }
+  #contact-portal.consultation-form .form-group,
+  #preview-portal.consultation-form .form-group { margin-bottom: 2.65rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #contact-portal.consultation-form .form-group input,
+  #contact-portal.consultation-form .form-group textarea,
+  #preview-portal.consultation-form .form-control { transition: none; }
+}
