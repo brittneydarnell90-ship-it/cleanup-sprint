@@ -1,0 +1,44 @@
+
+/* Cleanup Sprint editorial process + rates page */
+.process-hero{padding-block:92px 82px;background:linear-gradient(105deg,#FAF8F5 45%,#F0E6DD)}
+.process-hero-grid{display:grid;grid-template-columns:1fr .95fr;gap:clamp(30px,6vw,85px);align-items:center}
+.process-hero h1{font-size:clamp(3.65rem,5.6vw,5.6rem);max-width:750px;line-height:.98;letter-spacing:-.025em}
+.process-hero .hero-subtext{font-size:1.1rem;max-width:640px}
+.workflow-visual{min-height:440px;background:linear-gradient(125deg,#D9C8B8,#E8E1D7 60%,#CBB9A8);padding:55px 35px;display:flex;justify-content:center;align-items:center}
+.workflow-paper{background:#FFFCF7;width:min(100%,425px);padding:35px 36px 45px;box-shadow:4px 17px 30px #5d4c3824;transform:rotate(-3deg);border-left:8px solid #e5dcd1}
+.workflow-paper-header{display:flex;justify-content:space-between;gap:5px;border-bottom:1px solid #DAD0C7;padding-bottom:14px;font-size:.57rem;letter-spacing:.12em}
+.workflow-paper h2{font-size:2.8rem;margin:28px 0}
+.workflow-paper-row{display:grid;grid-template-columns:30px 1fr 70px;gap:14px;align-items:center;border-top:1px solid #DED5CD;padding:18px 0;font-size:.76rem}
+.workflow-paper-row span:first-child{font-family:var(--serif);font-size:1.35rem}
+.workflow-paper-row small{font-size:.6rem;color:#82746E;text-align:right;text-transform:uppercase}
+.process-section-title{max-width:760px;margin-bottom:58px}
+.process-section-title h2{font-size:clamp(3rem,4.5vw,4.5rem)}
+.process-section-title p{max-width:720px;font-size:1.15rem}
+.workflow-stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(22px,4vw,65px)}
+.workflow-stage{border-top:1px solid #CEC2B8;padding-top:25px}
+.workflow-stage .day-label{display:block;font:400 2.5rem/1.1 var(--serif);color:#9C8175;margin-bottom:24px}
+.workflow-stage h3{font-size:2.1rem}
+.workflow-stage p{font-size:.97rem}
+.pricing-area{background:#F1E9E0;padding-block:90px}
+.pricing-panel{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(35px,6vw,90px);border-top:1px solid #CAB9AB;padding-top:42px}
+.pricing-amount{font:500 clamp(4.5rem,8vw,7rem)/1 var(--serif);letter-spacing:-.03em}
+.pricing-side h2{font-size:clamp(2.1rem,3.6vw,3.3rem);margin-bottom:17px}
+.pricing-side p{max-width:680px}
+.pricing-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;border-top:1px solid #CDBDB0;margin-top:30px;padding-top:25px}
+.pricing-points strong{display:block;font:500 2rem var(--serif);line-height:1.2}
+.pricing-points span{font-size:.74rem;color:#6C625D}
+.deliverables{list-style:none;padding:0;margin:25px 0 30px;display:grid;gap:11px}
+.deliverables li{border-bottom:1px solid #D2C7BB;padding:8px 0;font-size:.9rem}
+.pricing-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.process-outro{display:grid;grid-template-columns:1.1fr .9fr;gap:9%;align-items:center}
+.process-outro h2{font-size:clamp(3.2rem,5vw,5rem)}
+.process-outro .actions{margin-top:26px}
+@media(max-width:800px){
+ .process-hero-grid,.pricing-panel,.process-outro{grid-template-columns:1fr}
+ .workflow-stages{grid-template-columns:1fr;gap:30px}
+ .process-hero{padding-block:60px}
+ .workflow-visual{min-height:350px;padding:32px}
+ .pricing-area{padding-block:65px}
+ .pricing-points{gap:15px}
+}
+@media(max-width:430px){.workflow-paper{padding:22px 18px}.workflow-paper h2{font-size:2.2rem}.workflow-paper-row{gap:8px}.process-hero h1{font-size:3.4rem}.pricing-points{grid-template-columns:1fr}}
