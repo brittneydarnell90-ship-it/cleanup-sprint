@@ -530,47 +530,78 @@ hr, .section-divider { border: 0; border-top: 1px solid rgba(30, 30, 30, 0.15); 
   font: 400 1.35rem/1.48 var(--font-serif);
 }
 .editorial-step-container {
+  grid-column: 1 / -1;
   width: 100%;
-  margin-top: 2.6rem;
-  padding-top: 3rem;
-  border-top: 1px solid rgba(30,30,30,.15);
+  margin-top: clamp(4px, 1vw, 16px);
+  padding-top: clamp(28px, 3.4vw, 46px);
+  border-top: 1px solid rgba(30, 30, 30, 0.15);
 }
 .editorial-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 2.3rem clamp(2rem, 4vw, 6rem);
-  margin-bottom: 2.5rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin-bottom: 26px;
+  align-items: stretch;
 }
 .editorial-grid .step-item {
-  padding-bottom: 1.3rem;
-  border-bottom: 1px solid rgba(30,30,30,.08);
+  min-width: 0;
+  padding: 4px clamp(18px, 2.5vw, 40px) 26px;
+  border-bottom: 1px solid rgba(30, 30, 30, 0.10);
+}
+.editorial-grid .step-item:first-child { padding-left: 0; }
+.editorial-grid .step-item + .step-item {
+  border-left: 1px solid rgba(30, 30, 30, 0.10);
 }
 .editorial-step-number {
   display: block;
-  margin-bottom: .5rem;
+  margin-bottom: 16px;
   color: #817A74;
   font-family: var(--font-sans);
-  font-size: .8rem;
+  font-size: 0.76rem;
   font-weight: 300;
-  letter-spacing: .15em;
+  line-height: 1.45;
+  letter-spacing: 0.15em;
 }
 .editorial-step-label {
   display: block;
-  font-family: var(--font-sans);
-  font-size: 1.1rem;
+  color: var(--text-charcoal);
+  font-family: var(--font-serif);
+  font-size: clamp(1.55rem, 2vw, 2rem);
   font-weight: 400;
-  letter-spacing: .02em;
+  line-height: 1.14;
+  letter-spacing: -0.015em;
 }
-.meta-anchor { padding-top: 1rem; }
+.meta-anchor { padding-top: 3px; text-align: right; }
 .meta-anchor .section-meta {
   color: #1E1E1E;
   font-family: var(--font-sans);
-  font-size: .75rem;
+  font-size: .71rem;
   font-weight: 500;
   letter-spacing: .2em;
 }
-@media (max-width: 430px) {
-  .editorial-grid { grid-template-columns: minmax(0,1fr); gap: 1.3rem; }
+@media (max-width: 850px) {
+  .editorial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 30px;
+  }
+  .editorial-grid .step-item:nth-child(3) {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+@media (max-width: 520px) {
+  .editorial-grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0;
+  }
+  .editorial-grid .step-item,
+  .editorial-grid .step-item:first-child,
+  .editorial-grid .step-item:nth-child(3) {
+    padding: 22px 0;
+    border-left: 0;
+  }
+  .editorial-step-number { margin-bottom: 8px; }
+  .meta-anchor { text-align: left; }
 }
 
 /* 09. Sunlit closing statement */
