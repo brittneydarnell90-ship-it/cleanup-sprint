@@ -255,11 +255,11 @@ hr, .section-divider { border: 0; border-top: 1px solid rgba(30, 30, 30, 0.15); 
 .btn-blush:hover, .btn-pink-luxury:hover {
   color: #FAF8F5; background: #1E1E1E;
 }
-.btn-berry, .btn-berry:visited, .btn-berry:active { color: #FAF8F5; background: var(--berry); border-color: var(--berry); }
+.btn-berry, .btn-berry:visited, .btn-berry:active, .btn-berry:focus { color: #FAF8F5; background: var(--berry); border-color: var(--berry); }
 .btn-berry:hover { color: #FAF8F5; background: #703047; border-color: #703047; }
-.btn-dark, .btn-dark:visited, .btn-dark:active { color: #FAF8F5; background: #1E1E1E; }
+.btn-dark, .btn-dark:visited, .btn-dark:active, .btn-dark:focus { color: #FAF8F5; background: #1E1E1E; }
 .btn-dark:hover { color: #1E1E1E; background: #E8C5BE; }
-.btn-ivory, .btn-ivory:visited, .btn-ivory:active { color: #1E1E1E; background: #FAF8F5; border-color: #FAF8F5; }
+.btn-ivory, .btn-ivory:visited, .btn-ivory:active, .btn-ivory:focus { color: #1E1E1E; background: #FAF8F5; border-color: #FAF8F5; }
 .btn-ivory:hover { color: #FAF8F5; background: transparent; border-color: #FAF8F5; }
 .btn-outline, .btn-outline-luxury, .btn-outline-luxury:visited, .btn-outline-luxury:active {
   color: #1E1E1E; background: transparent; border-color: #1E1E1E;
