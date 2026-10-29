@@ -1149,3 +1149,88 @@ hr, .section-divider { border: 0; border-top: 1px solid rgba(30, 30, 30, 0.15); 
   }
   .slate-grey-section .step-head { min-height: 5rem; }
 }
+
+
+/* 18. Editorial hero, centered services and soft-pink controls */
+/* Hero photograph: natural light, stationery and a calm feminine workspace */
+.archive-hero .hero-photo .photo-frame > img {
+  object-position: center center;
+}
+
+/* Center the service items in a three-column magazine arrangement.
+   Preserve the existing icons, labels, fonts and charcoal text. */
+.editorial-services .editorial-service-columns {
+  align-items: start;
+}
+.editorial-services .editorial-service {
+  text-align: center;
+  padding-inline: clamp(6px, 1.5vw, 22px);
+}
+.editorial-services .feature-icon {
+  display: block;
+  width: clamp(78px, 6.5vw, 92px);
+  height: clamp(78px, 6.5vw, 92px);
+  margin: 0 auto clamp(25px, 3vw, 40px);
+  stroke-width: 1;
+}
+.editorial-services .editorial-service .service-overline,
+.editorial-services .editorial-service h3,
+.editorial-services .editorial-service p {
+  text-align: center;
+}
+.editorial-services .editorial-service p {
+  margin-inline: auto;
+  max-width: 355px;
+}
+
+/* Soft low-saturation pinks: more contrast than ivory, without strong saturation. */
+.announcement-bar { background-color: #F3E3DE; }
+.package-card {
+  background-color: #EED9D2;
+  border-color: rgba(30, 30, 30, 0.15);
+}
+.btn-berry, .btn-berry:visited, .btn-berry:active, .btn-berry:focus,
+.btn-blush, .btn-blush:visited, .btn-pink-luxury,
+.btn-pink-luxury:visited, .btn-pink-luxury:active {
+  background-color: #ECD1CA;
+  color: #1E1E1E;
+  border-color: #1E1E1E;
+}
+#contact-portal button[type="submit"].btn-berry,
+#contact-portal button[type="submit"].btn-berry:focus,
+#contact-portal button[type="submit"].btn-berry:focus-visible,
+#contact-portal button[type="submit"].btn-berry:active {
+  background-color: #ECD1CA;
+  color: #1E1E1E;
+  border-color: #1E1E1E;
+}
+.btn-berry:hover, .btn-blush:hover, .btn-pink-luxury:hover,
+#contact-portal button[type="submit"].btn-berry:hover {
+  background-color: #1E1E1E;
+  color: #FAF8F5;
+  border-color: #1E1E1E;
+}
+
+/* Subtly lighter slate: stays matte grey, never blue or purple. */
+.slate-grey-section { background-color: #5B6061; }
+
+/* Refined pill buttons: preserve label spacing and hover behavior. */
+.btn, .btn-preview, .btn-pink-luxury, .btn-outline-luxury,
+.nav-preview, .btn-nav-accent,
+#contact-portal button[type="submit"] {
+  border-radius: 999px;
+  padding-inline: clamp(1.5rem, 2.1vw, 2rem);
+  transition: background-color .5s cubic-bezier(.25,1,.5,1),
+              border-color .5s cubic-bezier(.25,1,.5,1),
+              color .5s cubic-bezier(.25,1,.5,1),
+              transform .5s cubic-bezier(.25,1,.5,1);
+}
+.nav-preview, .btn-nav-accent { padding-block: .7rem; }
+@media (max-width: 900px) {
+  .editorial-services .editorial-service { padding-inline: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn, .btn-preview, .btn-pink-luxury, .btn-outline-luxury,
+  .nav-preview, .btn-nav-accent,
+  #contact-portal button[type="submit"] { transition: none; }
+}
