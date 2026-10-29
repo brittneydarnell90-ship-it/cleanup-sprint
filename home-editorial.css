@@ -49,3 +49,15 @@ a{color:inherit}button,input,textarea{font:inherit}p{font-size:1rem;line-height:
 #contact-portal button{min-width:190px}
 @media(max-width:760px){#inquiry{padding:4rem 0}#contact-portal .form-group{margin-bottom:3rem}}
 @media(prefers-reduced-motion:reduce){#contact-portal .form-group label,#contact-portal .form-group input,#contact-portal .form-group textarea,#contact-portal .error-message{transition:none}}
+
+/* Inline validation states handled by form-handler.js */
+#contact-portal .form-group.has-error input,
+#contact-portal .form-group.has-error textarea{
+  border-bottom:1px solid #C94A4A;
+}
+#contact-portal .form-group.has-error label{color:#A83A3A}
+#contact-portal .form-group.has-error .error-message{
+  visibility:visible;
+  opacity:1;
+  transform:translateY(0);
+}
