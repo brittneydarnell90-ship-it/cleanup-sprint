@@ -1234,3 +1234,87 @@ hr, .section-divider { border: 0; border-top: 1px solid rgba(30, 30, 30, 0.15); 
   .nav-preview, .btn-nav-accent,
   #contact-portal button[type="submit"] { transition: none; }
 }
+
+
+/* Before and after sample (card style) */
+.beforeafter h2 { font-family: var(--font-serif); font-weight: 500; margin: 12px 0 32px; }
+.ba-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(18px, 2.5vw, 30px); align-items: start; }
+.ba-card { background: #fff; border: 1px solid var(--rule); border-radius: 24px; padding: clamp(22px, 3vw, 34px); }
+.ba-card-after { border-color: var(--accent-blush); box-shadow: 0 0 0 1px var(--accent-blush) inset; }
+.ba-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.ba-icon { color: var(--text-tertiary); }
+.ba-pill { font-size: .66rem; letter-spacing: .18em; padding: 5px 14px; border: 1px solid var(--text-tertiary); border-radius: 999px; color: var(--text-tertiary); }
+.ba-card-after .ba-pill { background: var(--accent-blush); border-color: var(--accent-blush); color: var(--text-charcoal); }
+.ba-card h3 { font-family: var(--font-serif); font-weight: 500; font-size: 1.7rem; margin: 0 0 8px; }
+.ba-desc { color: var(--text-muted); font-size: .95rem; line-height: 1.5; margin: 0 0 18px; }
+.ba-scroll { overflow-x: auto; }
+.ba-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+.ba-table th { background: var(--surface-flax); text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--text-tertiary); font-weight: 500; }
+.ba-table td { padding: 9px 10px; border-bottom: 1px solid var(--surface-flax); }
+.ba-before td { color: var(--text-tertiary); }
+.ba-flag td { background: var(--accent-blush); }
+.ba-link { display: inline-block; margin-top: 20px; font-weight: 600; font-size: .9rem; color: var(--text-charcoal); text-decoration: none; border-bottom: 1px solid var(--accent-blush); }
+.ba-link:hover { border-bottom-color: var(--text-charcoal); }
+.ba-note { font-size: .8rem; color: var(--text-tertiary); margin-top: 16px; }
+@media (max-width: 800px) { .ba-grid { grid-template-columns: 1fr; } }
+
+/* Three-line hero headline: keep each sentence on one line on wide screens */
+.archive-hero h1 { font-size: clamp(2.4rem, 3.7vw, 3.6rem); }
+
+/* Larger hero sub-line (was 1.12rem) */
+.archive-hero .hero-subtext { font-size: clamp(1.25rem, 1.9vw, 1.5rem); line-height: 1.6; max-width: 600px; }
+.nowrap { white-space: nowrap; }
+
+/* Even hero spacing: space under the sub-line matches the space above it */
+.archive-hero .hero-subtext { margin-top: 32px; }
+.archive-hero .hero-copy .actions { margin-top: 44px; }
+@media (max-width: 600px) { .archive-hero .hero-copy .actions { margin-top: 38px; } }
+
+/* Balanced wrapping so no single word is left alone on a line */
+.archive-hero h1 { text-wrap: balance; }
+.archive-hero .hero-subtext { text-wrap: pretty; }
+
+/* before/after v2: matching cards, highlighted result */
+.ba-grid { grid-template-columns: 1fr 1fr; align-items: stretch; }
+.ba-card { display: flex; flex-direction: column; }
+.ba-num { font-family: var(--font-serif); font-size: 1.6rem; color: var(--text-tertiary); }
+.ba-card h3 { margin-bottom: 18px; }
+.ba-result { margin: 18px 0 0; font-size: .95rem; line-height: 1.5; color: var(--text-muted); }
+.ba-card-after { background: var(--text-charcoal); border-color: var(--text-charcoal); box-shadow: none; }
+.ba-card-after h3, .ba-card-after .ba-num { color: #FAF7F2; }
+.ba-card-after .ba-result { color: #E9DFD3; }
+.ba-card-after .ba-table th { background: #2C2927; color: #FAF7F2; border-bottom-color: #5a524b; }
+.ba-card-after .ba-table td { color: #FAF7F2; border-bottom-color: #3a3532; }
+.ba-card-after .ba-flag td { background: var(--accent-blush); color: var(--text-charcoal); }
+.ba-card-after .ba-link { color: #FAF7F2; margin-top: auto; padding-top: 0; align-self: flex-start; border-bottom-color: var(--accent-blush); }
+.ba-card-after .ba-result { margin-bottom: 20px; }
+@media (max-width: 800px) { .ba-grid { grid-template-columns: 1fr; } }
+.ba-grid > .ba-card { min-width: 0; }
+@media (max-width: 800px) { .ba-grid { grid-template-columns: minmax(0, 1fr); } .ba-table { font-size: .76rem; } .ba-table th, .ba-table td { padding: 8px 6px; } }
+.ba-table td:nth-child(2) { white-space: nowrap; }
+@media (max-width: 800px) { .ba-table { font-size: .72rem; } .ba-table th, .ba-table td { padding: 8px 4px; } .ba-table td:nth-child(3) { white-space: nowrap; } }
+
+/* after card: warm taupe */
+.ba-card-after { background: #E6D9CC; border-color: #D3C2B2; }
+.ba-card-after h3, .ba-card-after .ba-num { color: var(--text-charcoal); }
+.ba-card-after .ba-result { color: #3F3A36; }
+.ba-card-after .ba-pill { background: var(--text-charcoal); border-color: var(--text-charcoal); color: #FAF7F2; }
+.ba-card-after .ba-table th { background: #D6C5B4; color: var(--text-charcoal); border-bottom-color: #A99888; }
+.ba-card-after .ba-table td { color: var(--text-charcoal); border-bottom-color: #D3C2B2; }
+.ba-card-after .ba-flag td { background: #D9A89E; color: var(--text-charcoal); font-weight: 500; }
+.ba-card-after .ba-link { color: var(--text-charcoal); border-bottom-color: var(--text-charcoal); }
+/* after card: Britt's colors */
+.ba-card-after { background: #F2EBE3; border-color: #D8CBC0; }
+.ba-card-after h3, .ba-card-after .ba-num, .ba-card-after .ba-result, .ba-card-after .ba-table td, .ba-card-after .ba-table th, .ba-card-after .ba-link { color: #403B37; }
+.ba-card-after .ba-table th { background: #E8DCD0; border-bottom-color: #C9BBAD; }
+.ba-card-after .ba-table td { border-bottom-color: #E3D6CA; }
+.ba-card-after .ba-flag td { background: #E9C6BD; color: #403B37; }
+.ba-card-after .ba-pill { background: #FFFFFF; border-color: #D8CBC0; color: #403B37; }
+.ba-card-after .ba-link { border-bottom-color: #403B37; }
+/* card borders */
+.ba-card { border-color: #E6DDD3; }
+.ba-card-after { border-color: #CDB8A5; }
+/* card borders (Britt's exact values) */
+.ba-card { background: #FFFFFF; border: 1px solid #E5DED7; border-radius: 24px; }
+.ba-card-after { background: #F2EBE3; border: 1px solid #D6C4B5; border-radius: 24px; }
+.ba-before td { color: #625B55; }
