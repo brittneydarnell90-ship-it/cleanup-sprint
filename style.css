@@ -1449,3 +1449,29 @@ html{scroll-behavior:smooth;scroll-padding-top:100px;}
 .sprint-feature .sprint-stat-ivory{background:#F7F2EE;color:#2C2420;border-color:#E5DDD5;}
 @media(max-width:1020px){.sprint-feature .sprint-shell{grid-template-columns:1fr;gap:30px}.sprint-feature .sprint-copy{max-width:640px}.sprint-feature .sprint-stat{min-height:235px}.sprint-feature .sprint-stat svg{margin-bottom:26px}}
 @media(max-width:600px){.sprint-feature{padding:45px 0 50px;margin-top:0}.sprint-feature>.wrap{padding-top:48px}.sprint-feature .sprint-stats{grid-template-columns:1fr;gap:11px}.sprint-feature .sprint-stat{min-height:0;padding:22px}.sprint-feature .sprint-stat svg{margin-bottom:16px}.sprint-feature .sprint-stat strong span{display:inline}.sprint-feature .sprint-stat p{margin-top:8px}.archive-hero .hero-photo .photo-frame{border-radius:16px}}
+
+/* Heading legibility: services and founder introduction */
+.editorial-services .section-heading > .eyebrow,
+.archive-about .about-copy > .eyebrow {
+  margin-bottom: 14px;
+}
+.editorial-services .section-heading > h1,
+.archive-about .about-copy > h1 {
+  line-height: 1.1;
+  margin-bottom: 24px;
+  overflow: visible;
+}
+.editorial-services .section-heading > h1 .heading-line {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  text-align: left;
+}
+.editorial-services .section-heading > h1 .heading-line em {
+  display: inline;
+}
+.editorial-services .section-heading > h1 + p,
+.archive-about .about-copy > h1 + p {
+  margin-top: 0;
+}
