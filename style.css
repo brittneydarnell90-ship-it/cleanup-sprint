@@ -1475,3 +1475,7 @@ html{scroll-behavior:smooth;scroll-padding-top:100px;}
 .archive-about .about-copy > h1 + p {
   margin-top: 0;
 }
+
+/* Founder headline: separate aligned lines, no inherited indentation */
+.archive-about .about-copy > h1 .heading-line{display:block;margin:0;padding:0;text-align:left;text-indent:0;}
+.archive-about .about-copy > h1 .heading-line em{display:inline;}
